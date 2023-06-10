@@ -48,52 +48,18 @@
                     <div class="cake-cont">
                      <h2>Pick a Taste!</h2>
                      <div class="row">
-                        <div class="col-md-4">
-                           <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                              </router-link>
-                           </div>
+                        
+                           <div class="cake-click" v-if="birthdays.length>0">
+            <CakeCardComponent :birthdays="birthdays" @delete-birthday="deleteBirthday"></CakeCardComponent>
+        </div>
+        <div v-else>
+            <h1 class="text-danger">Cakes Loading...</h1>
+        </div>
+                       
+                       
                        </div>
-                       <div class="col-md-4">
-                        <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                              </router-link>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                     <div class="cake-click">
-                        <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                              </router-link>
-                     </div>
-                 </div>
-                       </div>
-                       <div class="row">
-                        <div class="col-md-4">
-                           <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                              </router-link>
-                           </div>
-                       </div>
-                       <div class="col-md-4">
-                        <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                              </router-link>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                     <div class="cake-click">
-                        <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                                
-                              </router-link>
-                     </div>
-                 </div>
-                       </div>
+                     
+                       
                     </div>
                         <!-- /gallery-isotope-->
                      </div>
@@ -144,8 +110,28 @@
     </div>
 </template>
 <script>
+import CakeCardComponent from '../../components/ladells/CakeCardComponent.vue';
+import axios from 'axios'
 export default {
-    
+    components: { CakeCardComponent },
+    data(){
+        return {
+            birthdays:[]
+        };
+    },
+    created () {
+        this.getBirthdays();
+    },
+    methods: {
+        getBirthdays(){
+            axios.get('http://127.0.0.1:8000/api/birthdays').then(res=>{
+                this.birthdays=res.data;
+                console.log(res.data);
+            })
+        },
+        
+       
+    }
 }
 </script>
 <style>

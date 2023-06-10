@@ -47,51 +47,19 @@
                         <!-- Gallery -->
                     <div class="cake-cont">
                      <h2>Pick a Taste!</h2>
-                     <div class="row">
-                        <div class="col-md-4">
-                           <div class="cake-click">
-                              <router-link to="">
-                                <img class="img-responsive img-rounded center-block" src="https://i.pinimg.com/236x/41/55/87/4155878df91e25ed1f12dd364af055fc.jpg" alt="">
-                              </router-link>
-                           </div>
-                       </div>
-                       <div class="col-md-4">
-                        <div class="cake-click">
-                            <router-link to="">
-                                <img class="img-responsive img-rounded center-block" src="https://i.pinimg.com/236x/41/55/87/4155878df91e25ed1f12dd364af055fc.jpg" alt="">
-                              </router-link>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                     <div class="cake-click">
-                        <router-link to="">
-                                <img class="img-responsive img-rounded center-block" src="https://i.pinimg.com/236x/41/55/87/4155878df91e25ed1f12dd364af055fc.jpg" alt="">
-                              </router-link>
-                     </div>
-                 </div>
-                       </div>
+                     
                        <div class="row">
-                        <div class="col-md-4">
-                           <div class="cake-click">
-                            <router-link to="">
-                                <img class="img-responsive img-rounded center-block" src="https://i.pinimg.com/236x/41/55/87/4155878df91e25ed1f12dd364af055fc.jpg" alt="">
-                              </router-link>
-                           </div>
-                       </div>
-                       <div class="col-md-4">
-                        <div class="cake-click">
-                            <router-link to="">
-                                <img class="img-responsive img-rounded center-block" src="https://i.pinimg.com/236x/41/55/87/4155878df91e25ed1f12dd364af055fc.jpg" alt="">
-                              </router-link>
-                        </div>
+                        <div class="row">
+                        
+                        <div class="cake-click" v-if="weddings.length>0">
+         <WeddingCardComponent :weddings="weddings" @delete-wedding="deleteWedding"></WeddingCardComponent>
+     </div>
+     <div v-else>
+         <h1 class="text-danger">Cakes Loading...</h1>
+     </div>
+                    
+                    
                     </div>
-                    <div class="col-md-4">
-                     <div class="cake-click">
-                        <router-link to="">
-                                <img class="img-responsive img-rounded center-block" src="https://i.pinimg.com/236x/41/55/87/4155878df91e25ed1f12dd364af055fc.jpg" alt="">
-                              </router-link>
-                     </div>
-                 </div>
                        </div>
                     </div>
                         <!-- /gallery-isotope-->
@@ -143,8 +111,28 @@
     </div>
 </template>
 <script>
+import WeddingCardComponent from '../../components/ladells/WeddingCardComponent.vue';
+import axios from 'axios'
 export default {
-    
+    components: {WeddingCardComponent},
+    data(){
+        return {
+            weddings:[]
+        };
+    },
+    created () {
+        this.getWeddings();
+    },
+    methods: {
+        getWeddings(){
+            axios.get('http://127.0.0.1:8000/api/weddings').then(res=>{
+                this.weddings=res.data;
+                console.log(res.data);
+            })
+        },
+        
+       
+    }
 }
 </script>
 <style>

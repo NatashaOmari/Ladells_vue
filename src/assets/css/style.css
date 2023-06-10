@@ -387,8 +387,11 @@
      font-size:11px;
      text-transform: uppercase;
 }
+.post-review{
+    padding: 20px;
+}
  .post-slide .post-review {
-     padding: 20px;
+     padding: 30px;
 }
  .post-slide .post-title{
      margin:0 0 10px 0;

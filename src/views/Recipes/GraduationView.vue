@@ -47,57 +47,14 @@
                         <!-- Gallery -->
                     <div class="cake-cont">
                      <h2>Pick a Taste!</h2>
-                     <div class="row">
-                        <div class="col-md-4">
-                           <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                                
-                              </router-link>
-                           </div>
-                       </div>
-                       <div class="col-md-4">
-                        <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                                
-                              </router-link>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                     <div class="cake-click">
-                        <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                                
-                              </router-link>
-                     </div>
-                 </div>
-                       </div>
+                     
                        <div class="row">
-                        <div class="col-md-4">
-                           <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                                
-                              </router-link>
-                           </div>
-                       </div>
-                       <div class="col-md-4">
-                        <div class="cake-click">
-                            <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                                
-                              </router-link>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                     <div class="cake-click">
-                        <router-link to="/singlecake">
-                                <img class="img-responsive img-rounded center-block" src="/src/assets/img/gallery/gallery3pic.jpg" alt="">
-                                
-                              </router-link>
-                     </div>
-                 </div>
+                        <div class="cake-click" v-if="graduations.length>0">
+            <GraduationCardComponent :graduations="graduations" @delete-graduation="deleteGraduation"></GraduationCardComponent>
+        </div>
+        <div v-else>
+            <h1 class="text-danger">Cakes Loading...</h1>
+        </div>
                        </div>
                     </div>
                         <!-- /gallery-isotope-->
@@ -149,8 +106,28 @@
     </div>
 </template>
 <script>
+import GraduationCardComponent from '../../components/ladells/GraduationCardComponent.vue';
+import axios from 'axios'
 export default {
-    
+    components: {GraduationCardComponent},
+    data(){
+        return {
+            graduations:[]
+        };
+    },
+    created () {
+        this.getGraduations();
+    },
+    methods: {
+        getGraduations(){
+            axios.get('http://127.0.0.1:8000/api/graduations').then(res=>{
+                this.graduations=res.data;
+                console.log(res.data);
+            })
+        },
+        
+       
+    }
 }
 </script>
 <style>

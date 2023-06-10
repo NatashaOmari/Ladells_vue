@@ -10,7 +10,7 @@
                      <!--inside-wrapper  -->
                      <div class="inside-wrapper container">
                         <!-- Heading -->
-                        <h1>Tasty Treats</h1>
+                        <h1>Login</h1>
                         
                      </div>
                      <!--/inside-wrapper  -->
@@ -25,39 +25,27 @@
                   <section class="inside-page">
                      <div class="inside-wrapper container">
                         <div class="row">
-                            <div class="col-md-5">
-                               <!-- image -->
-                               <img class="img-responsive img-rounded center-block" src="https://i.pinimg.com/236x/92/5b/fd/925bfda55dd5c9580376562cb3884a65.jpg" alt="">
-                            </div>
-                            <!-- /col-md-->
-                            <div class="col-md-7 res-margin">
-                               <h2>Quality cakes and pastries</h2>
-                               <p><strong>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie.</strong></p>
-                               <p> In aliquet magna nec lobortis maximus.  Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules, Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.                        </p>
-                               <!-- list-->
-                               <ul class="custom pl-0">
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                                  <li>Curabitur blandit pretium interdum. Aliquam sit amet elementum odio, vel ultrices dui. Pellentesque ac odio vitae felis suscipit </li>
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                               </ul>
-                            </div>
-                            <!-- /col-md-->
-                         </div>
-                        
-                        <!-- Gallery -->
-                    <div class="cake-cont">
-                     <h2>Pick a Taste!</h2>
-                     
-                       <div class="row">
-                        <div class="cake-click" v-if="alleventss.length>0">
-            <AlleventsCardComponent :alleventss="alleventss" @delete-allevents="deleteAllevents"></AlleventsCardComponent>
-        </div>
-        <div v-else>
-            <h1 class="text-danger">Cakes Loading...</h1>
-        </div>
-                       </div>
-                    </div>
-                        <!-- /gallery-isotope-->
+                            <div class="col-md-8 col-centered">
+                                 <div class="media comment-form">
+                                    <h5>Please Log In</h5>
+                                    <!-- Form Starts -->
+                                    <form @submit.prevent="handleLogin()">
+                                    <div class="form-group ">
+                                       <error style="font-size: smaller;" v-if="error" :error="error" />       
+                                       <label>Email</label>
+                                       <input type="email" name="email" class="form-control input-field" v-model="email">   
+                                       <label>Password</label>
+                                       <input type="password" name="password" class="form-control input-field" v-model="password">  
+                                            
+                                       
+                                    </div>
+                                    <!--  Button -->
+                                    <button class="btn btn-success" type="submit">Log in</button>
+                                 </form>
+                                 </div>
+                              </div>
+                        </div>
+                            
                      </div>
                      <!-- /inside-wrapper -->
                   </section>
@@ -106,29 +94,48 @@
     </div>
 </template>
 <script>
-import AlleventsCardComponent from '../../components/ladells/AlleventsCardComponent.vue';
-import axios from 'axios'
+import axios from 'axios';
+import Error from '../../components/ErrorComponent.vue';
 export default {
-    components: {AlleventsCardComponent},
-    data(){
-        return {
-            alleventss:[]
-        };
+    components: {
+        Error
     },
-    created () {
-        this.getAlleventss();
+    data() {
+        return {
+            email: '',
+            password: '',
+            error: '',
+            //showPassword: false,
+        }
+    },
+    computed: {
+      //   inputType() {
+      //       return this.showPassword ? 'text' : 'password';
+      //   },
+      //   toggleIconClass() {
+      //       return this.showPassword ? 'fa fa-eye-slash' : 'fa fa-eye';
+      //   },
     },
     methods: {
-        getAlleventss(){
-            axios.get('http://127.0.0.1:8000/api/allevents').then(res=>{
-                this.alleventss=res.data;
-                console.log(res.data);
-            })
+        async handleLogin() {
+            try {
+                const response = await axios.post('login', {
+                    email: this.email,
+                    password: this.password,
+                });
+                console.log(response)
+
+                localStorage.setItem('token', response.data.token);
+                this.$router.push('/');
+            } catch (e) {
+                this.error = 'Invalid username/password'
+            }
         },
-        
-       
-    }
-}
+      //   togglePasswordVisibility() {
+      //       this.showPassword = !this.showPassword;
+      //   },
+    },
+};
 </script>
 <style>
     
