@@ -31,15 +31,9 @@
                             </div>
                             <!-- /col-md-->
                             <div class="col-md-7 res-margin">
-                               <h2>Quality cakes and pastries</h2>
-                               <p><strong>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie.</strong></p>
-                               <p> In aliquet magna nec lobortis maximus.  Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules, Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.                        </p>
-                               <!-- list-->
-                               <ul class="custom pl-0">
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                                  <li>Curabitur blandit pretium interdum. Aliquam sit amet elementum odio, vel ultrices dui. Pellentesque ac odio vitae felis suscipit </li>
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                               </ul>
+                               <h2>Blissful Bites</h2>
+                               <p>Welcome to a world of birthday bliss where sugar and wishes collide! In our tantalizing birthday cake recipes section, we've whisked up a symphony of flavors and creativity to bring you the ultimate collection of celebratory confections. From whimsical wonders to classic favorites with a twist, each recipe is a delightful invitation to make every birthday a mouthwatering extravaganza. So grab your apron, ignite the candles, and let's dive into a world where cakes are the sweet centerpiece of joyous memories and delicious surprises.</p>
+                               
                             </div>
                             <!-- /col-md-->
                          </div>

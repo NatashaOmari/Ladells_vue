@@ -80,9 +80,9 @@ export default {
   },
   methods: {
     async handleLogout() {
-   //   if (confirm('Are you sure to Logout?')) {
-      //  localStorage.removeItem('token');
-     // }
+     if (confirm('Are you sure to Logout?')) {
+       localStorage.removeItem('token');
+      }
      const response = await axios.post('logout');
      console.log(response)
             this.$router.push('/');

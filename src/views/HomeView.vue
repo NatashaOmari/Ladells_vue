@@ -28,8 +28,8 @@
          <div class="col-md-12">
             <h2 class="text-center-sm">Made with love</h2>
             <img class="img-responsive img-rounded pull-right-lg col-md-4 center-block" src="/src/assets/img/services/services-homepic.jpg" alt="">
-            <p class="lead res-margin">High Quality services since 2001, qui fabulas definitiones at, ei nibh offendit mel. Eius comprehensam ex est.Pri ei laudem invenire, has ex regione sapientem</p>
-            <p>Lorem ipsum dolor sit amet, per no malorum aliquam utroque, vim legere eleifend an, malis delicatissimi vel te. Pro fuisset splendide vulputate an, quo eu eripuit nominati. Sit enim eius laoreet te, qui fabulas definitiones at, ei nibh offendit mel. Eius comprehensam ex est.Pri ei laudem invenire, has ex regione sapientem.</p>
+            <p class="lead res-margin">Indulge in the art of baking and embark on a delectable journey through our virtual kitchen. </p>
+            <p>Welcome to Ladells Recipes, where every sweet creation is a symphony of flavors and a feast for the eyes. Whether you're a novice or a seasoned baker, our enchanting collection of cake recipes will inspire your culinary passion and ignite your imagination. Get ready to whisk, measure, and sprinkle your way to scrumptious masterpieces that will leave everyone craving for more. Get lost in a world of sugar and spice as we share the secrets to creating divine cakes that will make every occasion a celebration.</p>
          </div>
       </div>
       
@@ -44,9 +44,9 @@
                   <div class="service-content">
                      <h5>Birthday Cakes</h5>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
+                        Indulge in a divine assortment of mouthwatering masterpieces that will turn every birthday into a sweet sensation.
                      </p>
-                     <a class="btn btn-primary btn-md" href="#">Read More</a>
+                     <a class="btn btn-primary btn-md" href="#">See More</a>
                   </div>
                </div>
             </div>
@@ -59,9 +59,9 @@
                   <div class="service-content">
                      <h5>Graduation Cakes</h5>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
+                        Celebrate academic achievements with a burst of flavor and artistry from our dazzling graduation cakes.
                      </p>
-                     <a class="btn btn-primary btn-md" href="#">Read More</a>
+                     <a class="btn btn-primary btn-md" href="#">See More</a>
                   </div>
                </div>
             </div>
@@ -74,9 +74,9 @@
                   <div class="service-content">
                      <h5>Wedding Cakes</h5>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
+                        Discover a world of confectionery elegance and enchantment in our captivating wedding cakes section.
                      </p>
-                     <a class="btn btn-primary btn-md" href="#">Read More</a>
+                     <a class="btn btn-primary btn-md" href="#">See More</a>
                   </div>
                </div>
             </div>
@@ -105,11 +105,10 @@
                      </div>
                      
                      <!-- about carousel -->
-                     <p>Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
-                     <p><strong>Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu risus scelerisque laoree.</strong></p>
-                     <p>Felis tiam non metus Placerat a ultricies a, posuere lorem ipseut lincas psuiem t volut pat phas ellus ac 
-                        sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nibh fusce mollis  
-                        viverra elit
+                     <p><strong>Unparalleled Variety:</strong> With an extensive array of flavors, fillings, and designs, we offer a kaleidoscope of options to cater to every taste and preference. From classic favorites to innovative creations, there's a perfect cake waiting to make your every celebration truly unforgettable.</p>
+                     <p><strong>Personalized Touch:</strong> Your special moments deserve a cake as unique as you are. Our dedicated team is committed to working closely with you, bringing your vision to life and infusing every creation with a personal touch that reflects your style and personality.</p>
+                     <p>
+                        <strong>Exquisite Craftsmanship:</strong> Our recipes are meticulously handcrafted by our skilled bakers, combining precision and passion to create edible works of art that are as visually stunning as they are delicious.
                      </p>
                   </div>
                   
@@ -142,9 +141,9 @@
                      </div>
                      <!-- post info -->
                      <div class="post-review">
-                        <h5 class="post-title"><a href="blog-single.html">The Best pastries for easter time</a></h5>
+                        <h5 class="post-title"><a href="blog-single.html">The Best pastries for any event</a></h5>
                         
-                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad magni, nesciunt obcaecati possimus...</p>
+                        <p class="post-description">From whimsical wonders to show-stopping creations, our meticulously crafted masterpieces will make your special day a sweet symphony of love and celebration.</p>
                         <!-- button -->
                         
                      </div>
@@ -167,7 +166,7 @@
                      <div class="post-review">
                         <h5 class="post-title"><a href="blog-single.html">Order our new Red Velvet Cake </a></h5>
                         
-                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad magni, nesciunt obcaecati possimus...</p>
+                        <p class="post-description">Indulge in the velvety allure of a classic confection as rich as love itself. Introducing our irresistible red velvet cake.</p>
                         <!-- button -->
                         
                      </div>
@@ -190,7 +189,7 @@
                      <div class="post-review">
                         <h5 class="post-title"><a href="blog-single.html">Order your Valentines day Cake</a></h5>
                         
-                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad magni, nesciunt obcaecati possimus...</p>
+                        <p class="post-description">Ignite the flames of love and sweeten your Valentine's Day with a divine cake that captures the essence of romance.</p>
                         <!-- button -->
                         
                      </div>
@@ -207,12 +206,11 @@
       <!-- alert box -->
       <div class="alert-bg alert alert-info col-md-12 margin1">
          <h5>Custom Orders</h5>
-         <p>Laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.
+         <p>Whether you're planning a wedding, birthday, or any special occasion, we thrive on creating one-of-a-kind edible masterpieces that will leave your guests in awe. From intricately designed tiers to personalized flavors and decorations, our bespoke cakes are tailored to your every desire. Don't settle for ordinary when you can have extraordinary. Contact us today and let's embark on a delectable journey together to create a cake that will be the highlight of your celebration, making memories that will be cherished for a lifetime.
          </p>
-         <p>Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu risus scelerisque laoree.
-         </p>
+         
          <!-- button -->
-         <a class="btn btn-secondary" href="contact.html">Contact us</a>
+         
       </div>
       <!-- /alert -->   
    </div>

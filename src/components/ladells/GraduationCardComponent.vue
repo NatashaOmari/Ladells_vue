@@ -1,5 +1,5 @@
 <template>
-    <div v-for="wedding in weddings" :key="wedding.id">
+    <div v-for="graduation in graduations" :key="graduation.id">
         <div class="col-md-4">
                   <div class=" box-hover">
                      <div class="post-img">
@@ -11,9 +11,10 @@
                      </div>
                      <!-- post info -->
                      <div class="post-review">
-                        <h5 class="post-title"><a href="#"> {{ wedding.name }} </a></h5>
+                        <h5 class="post-title"><a href=""> <router-link :to="'/singlegraduation/' + graduation.id">{{ graduation.name }}</router-link></a></h5>
                         
-                        <p class="post-description">{{ wedding.recipe }}</p>
+                        <p class="post-description" v-if="graduation.recipe.length<50">{{ graduation.recipe }}</p>
+                        <p class="post-description" v-else>{{ graduation.recipe.substring(0,50)+"..." }}</p>
                         <!-- button -->
                         
                      </div>
@@ -25,7 +26,7 @@
 </template>
 <script>
 export default {
-    props:['weddings'],
+    props:['graduations'],
 }
 </script>
 <style>

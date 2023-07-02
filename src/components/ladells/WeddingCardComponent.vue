@@ -11,9 +11,12 @@
                      </div>
                      <!-- post info -->
                      <div class="post-review">
-                        <h5 class="post-title"><a href="#"> {{ wedding.name }} </a></h5>
+                        <h5 class="post-title">
+                           <a href=""> <router-link :to="'/singlewedding/' + wedding.id">{{ wedding.name }}</router-link></a>
+                        </h5>
                         
-                        <p class="post-description">{{ wedding.recipe }}</p>
+                        <p class="post-description" v-if="wedding.recipe.length<50">{{ wedding.recipe }}</p>
+                        <p class="post-description" v-else>{{ wedding.recipe.substring(0,50)+"..." }}</p>
                         <!-- button -->
                         
                      </div>

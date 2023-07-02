@@ -10,7 +10,7 @@
                         <!--inside-wrapper  -->
                         <div class="inside-wrapper container">
                             <!-- Heading -->
-                            <h1>Add Birthday Cake</h1>
+                            <h1>Add Graduation Cake</h1>
 
                         </div>
                         <!--/inside-wrapper  -->
@@ -32,15 +32,15 @@
                                         <form @submit.prevent="submitForm" enctype="multipart/form-data">
                                             <div class="form-group " >
 
-                                                <label for="birthday_name">Name</label>
-                                                <input type="text" name="birthday_name" id="birthday_name" class="form-control input-field"
-                                                    v-model="birthday.name">
+                                                <label for="graduation_name">Name</label>
+                                                <input type="text" name="graduation_name" id="graduation_name" class="form-control input-field"
+                                                    v-model="graduation.name">
 
-                                                    <label for="birthday_image">Image</label>
-                                                <input type="file" name="birthday_image" id="birthday_image" class="form-control input-field"
-                                                @change="handleImageChange" accept="uploads/birthdays/*">
-                                                <label for="birthday_recipe">Recipe</label>
-                                                <textarea name="birthday_recipe" id="birthday_recipe" class="textarea-field form-control" rows="3" v-model="birthday.recipe" ></textarea>
+                                                    <label for="graduation_image">Image</label>
+                                                <input type="file" name="graduation_image" id="graduation_image" class="form-control input-field"
+                                                @change="handleImageChange" accept="uploads/graduations/*">
+                                                <label for="graduation_recipe">Recipe</label>
+                                                <textarea name="graduation_recipe" id="graduation_recipe" class="textarea-field form-control" rows="3" v-model="graduation.recipe" ></textarea>
 
 
                                             </div>
@@ -104,7 +104,7 @@ export default {
 
     data() {
         return {
-    birthday: {
+    graduation: {
         name: '',
         image: null,
         recipe: '',
@@ -116,21 +116,21 @@ export default {
 
     methods: {
         handleImageChange(event) {
-            this.birthday.image = event.target.files[0];
+            this.graduation.image = event.target.files[0];
         },
         submitForm() {
             const formData = new FormData();
-            formData.append('name', this.birthday.name);
-                formData.append('image', this.birthday.image);
-                formData.append('recipe', this.birthday.recipe);
+            formData.append('name', this.graduation.name);
+                formData.append('image', this.graduation.image);
+                formData.append('recipe', this.graduation.recipe);
                 
-            axios.post('birthday/create', formData, {
+            axios.post('graduation/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
       }).then(res=>{
                 console.log(res);
-                this.$router.push('/birthday');
+                this.$router.push('/graduation');
             })
         },
     },

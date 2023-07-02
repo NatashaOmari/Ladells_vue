@@ -38,7 +38,8 @@
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum
                                                     malesuada.
                                                 </p>
-                                                <RouterLink to="/addbirthday" class="btn btn-primary btn-md">Add Cake</RouterLink>
+                                                <button class="btn btn-success"><RouterLink to="/addbirthday" class="btn btn-primary">Add Cake</RouterLink></button>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -55,7 +56,8 @@
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
                      </p>
-                     <a class="btn btn-primary btn-md" href="#">Read More</a>
+                     <button class="btn btn-success"><RouterLink to="/addgraduation" class="btn btn-primary">Add Cake</RouterLink></button>
+                     
                   </div>
                </div>
             </div>
@@ -74,7 +76,7 @@
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
                      </p>
-                     <a class="btn btn-primary btn-md" href="#">Read More</a>
+                     <button class="btn btn-success"><RouterLink to="/addwedding" class="btn btn-primary">Add Cake</RouterLink></button>
                   </div>
                </div>
             </div>
@@ -89,7 +91,7 @@
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
                      </p>
-                     <a class="btn btn-primary btn-md" href="#">Read More</a>
+                     <button class="btn btn-success"><RouterLink to="/addallevents" class="btn btn-primary">Add Cake</RouterLink></button>
                   </div>
                </div>
             </div>

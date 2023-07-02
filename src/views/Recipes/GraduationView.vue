@@ -31,15 +31,9 @@
                             </div>
                             <!-- /col-md-->
                             <div class="col-md-7 res-margin">
-                               <h2>Quality cakes and pastries</h2>
-                               <p><strong>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie.</strong></p>
-                               <p> In aliquet magna nec lobortis maximus.  Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules, Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.                        </p>
-                               <!-- list-->
-                               <ul class="custom pl-0">
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                                  <li>Curabitur blandit pretium interdum. Aliquam sit amet elementum odio, vel ultrices dui. Pellentesque ac odio vitae felis suscipit </li>
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                               </ul>
+                               <h2>Joyful Creations</h2>
+                               <p>Get ready to celebrate a milestone achievement with our sensational graduation cake recipes. In this vibrant and flavorful section, we present a symphony of confections that embody the spirit of success and accomplishment. From cap-tossing creations to diploma-inspired delights, our graduation cake recipes are designed to honor the journey of hard work and perseverance. So put on your graduation cap, grab a slice of inspiration, and let's toast to the future with a cake that will make your graduation celebration truly unforgettable.</p>
+                               
                             </div>
                             <!-- /col-md-->
                          </div>

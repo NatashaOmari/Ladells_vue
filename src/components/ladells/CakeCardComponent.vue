@@ -12,10 +12,11 @@
                      <!-- post info -->
                      <div class="post-review">
                         <h5 class="post-title">
-                           <a href=""> <router-link :to="'/singlebirthday/' + birthdays.id">{{ birthday.name }}</router-link></a>
+                           <a href=""> <router-link :to="'/singlebirthday/' + birthday.id">{{ birthday.name }}</router-link></a>
                         </h5>
                         
-                        <p class="post-description">{{ birthday.recipe }}</p>
+                        <p class="post-description" v-if="birthday.recipe.length<50">{{ birthday.recipe }}</p>
+                        <p class="post-description" v-else>{{ birthday.recipe.substring(0,50)+"..." }}</p>
                         <!-- button -->
                         
                      </div>

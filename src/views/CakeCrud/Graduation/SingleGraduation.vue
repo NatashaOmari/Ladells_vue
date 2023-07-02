@@ -27,7 +27,7 @@
                      <div class="inside-wrapper container">
                         <!-- Blog page -->
                         <div id="blog-container" class="col-md-8">
-                           <h2>{{ birthday.name }}</h2>
+                           <h2>{{ graduation.name }}</h2>
                            <!-- Post Info -->
                            
                            <!-- post-info -->
@@ -35,7 +35,7 @@
                               <!-- Image -->
                               <img class="img-responsive" src="/src/assets/img/blog/blogprev2pic.jpg"  alt="">						 	
                               <!-- Post Content -->
-                              <p>{{ birthday.recipe }}</p>
+                              <p>{{ graduation.recipe }}</p>
                               
                              
                            </div>
@@ -56,7 +56,7 @@
                            <!-- About us Widget -->
                            <div class="well">
                               <h5 class="sidebar-header">About Us</h5>
-                              <p>At Ladells, we believe that baking and sharing delicious cakes can bring joy to every occasion. Whether you're a seasoned baker or a passionate cake lover, our platform is designed to inspire and connect cake enthusiasts from all walks of life. With a vast collection of mouthwatering recipes, insightful baking tips, and a vibrant community of fellow cake lovers, Ladells is your go-to hub for all things cake-related. Join us on this delightful journey as we celebrate the art of baking and create unforgettable memories, one slice of cake at a time. Let's indulge in the sweet world of cakes together at Ladells!</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium.</p>
                               <!-- Social Media icons -->
                               <div class="social-media ">
                                  <a href="#" title=""><i class="fab fa-twitter"></i></a>
@@ -139,7 +139,7 @@ import axios from 'axios';
 export default {
     data() { 
         return {
-            birthday: {
+            graduation: {
                 name: "",
                 image: "",
                 recipe: ""
@@ -148,19 +148,19 @@ export default {
         
     },
     created() {
-        this.getBirthday();
+        this.getGraduation();
     },
     methods: {
-        async getBirthday() {
+        async getGraduation() {
             let id = this.$route.params.id;
-            await axios.get(`birthday/${id}`).then((res) => {
-                this.birthday = res.data;
+            await axios.get(`graduation/${id}`).then((res) => {
+                this.graduation = res.data;
                 console.log(res.data)
             });
         },
         getImageUrl (filename) {
          if(filename) {
-            return `/uploads/birthdays/${filename}`;
+            return `/uploads/graduations/${filename}`;
          } else {
             return 'no image';
          }

@@ -27,7 +27,7 @@
                      <div class="inside-wrapper container">
                         <!-- Blog page -->
                         <div id="blog-container" class="col-md-8">
-                           <h2>{{ birthday.name }}</h2>
+                           <h2>{{ wedding.name }}</h2>
                            <!-- Post Info -->
                            
                            <!-- post-info -->
@@ -35,7 +35,7 @@
                               <!-- Image -->
                               <img class="img-responsive" src="/src/assets/img/blog/blogprev2pic.jpg"  alt="">						 	
                               <!-- Post Content -->
-                              <p>{{ birthday.recipe }}</p>
+                              <p>{{ wedding.recipe }}</p>
                               
                              
                            </div>
@@ -139,7 +139,7 @@ import axios from 'axios';
 export default {
     data() { 
         return {
-            birthday: {
+            wedding: {
                 name: "",
                 image: "",
                 recipe: ""
@@ -148,19 +148,19 @@ export default {
         
     },
     created() {
-        this.getBirthday();
+        this.getWedding();
     },
     methods: {
-        async getBirthday() {
+        async getWedding() {
             let id = this.$route.params.id;
-            await axios.get(`birthday/${id}`).then((res) => {
-                this.birthday = res.data;
+            await axios.get(`wedding/${id}`).then((res) => {
+                this.wedding = res.data;
                 console.log(res.data)
             });
         },
         getImageUrl (filename) {
          if(filename) {
-            return `/uploads/birthdays/${filename}`;
+            return `/uploads/weddings/${filename}`;
          } else {
             return 'no image';
          }

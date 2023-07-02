@@ -11,6 +11,12 @@ import UserProfile from '../views/User/UserProfile.vue'
 import AddCake from '../views/AddCake.vue' 
 import AddBirthday from '../views/CakeCrud/Birthday/AddBirthday.vue' 
 import SingleBirthday from '../views/CakeCrud/Birthday/SingleBirthday.vue'
+import AddGraduation from '../views/CakeCrud/Graduation/AddGraduation.vue'
+import SingleGraduation from '../views/CakeCrud/Graduation/SingleGraduation.vue'
+import AddWedding from '../views/CakeCrud/Wedding/AddWedding.vue'
+import SingleWedding from '../views/CakeCrud/Wedding/SingleWedding.vue'
+import AddAllevents from '../views/CakeCrud/Allevents/AddAllevents.vue'
+import SingleAllevents from '../views/CakeCrud/Allevents/SingleAllevents.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -81,6 +87,36 @@ const router = createRouter({
       path: '/singlebirthday/:id',
       name: 'singlebirthday',
       component: SingleBirthday
+    },
+    {
+      path: '/addgraduation',
+      name: 'addgraduation',
+      component: AddGraduation
+    },
+    {
+      path: '/singlegraduation/:id',
+      name: 'singlegraduation',
+      component: SingleGraduation
+    },
+    {
+      path: '/addwedding',
+      name: 'addwedding',
+      component: AddWedding
+    },
+    {
+      path: '/singlewedding/:id',
+      name: 'singlewedding',
+      component: SingleWedding
+    },
+    {
+      path: '/addallevents',
+      name: 'addallevents',
+      component: AddAllevents
+    },
+    {
+      path: '/singleallevents/:id',
+      name: 'singleallevents',
+      component: SingleAllevents
     },
   ]
 })

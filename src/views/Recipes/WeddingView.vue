@@ -31,15 +31,11 @@
                             </div>
                             <!-- /col-md-->
                             <div class="col-md-7 res-margin">
-                               <h2>Quality cakes and pastries</h2>
-                               <p><strong>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie.</strong></p>
-                               <p> In aliquet magna nec lobortis maximus.  Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules, Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.                        </p>
+                               <h2>Festive Flavors</h2>
+                               <p>Welcome to a tantalizing journey through our enchanting world of wedding cake recipes. Here, we weave together passion and confectionery artistry to present you with an exquisite collection of matrimonial masterpieces. From elegant designs to delectable flavors that dance on the palate, our wedding cake recipes are crafted to symbolize love, joy, and eternal bliss. So join us as we embark on a delightful exploration, where each recipe unveils a sweet union of culinary perfection and cherished moments.</p>
+                               
                                <!-- list-->
-                               <ul class="custom pl-0">
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                                  <li>Curabitur blandit pretium interdum. Aliquam sit amet elementum odio, vel ultrices dui. Pellentesque ac odio vitae felis suscipit </li>
-                                  <li>Ipuset phas ellus ac sodales Lorem ipsum dolor</li>
-                               </ul>
+                               
                             </div>
                             <!-- /col-md-->
                          </div>

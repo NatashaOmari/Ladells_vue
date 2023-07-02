@@ -10,7 +10,7 @@
                         <!--inside-wrapper  -->
                         <div class="inside-wrapper container">
                             <!-- Heading -->
-                            <h1>Add Birthday Cake</h1>
+                            <h1>Add Wedding Cake</h1>
 
                         </div>
                         <!--/inside-wrapper  -->
@@ -32,15 +32,15 @@
                                         <form @submit.prevent="submitForm" enctype="multipart/form-data">
                                             <div class="form-group " >
 
-                                                <label for="birthday_name">Name</label>
-                                                <input type="text" name="birthday_name" id="birthday_name" class="form-control input-field"
-                                                    v-model="birthday.name">
+                                                <label for="wedding_name">Name</label>
+                                                <input type="text" name="wedding_name" id="wedding_name" class="form-control input-field"
+                                                    v-model="wedding.name">
 
-                                                    <label for="birthday_image">Image</label>
-                                                <input type="file" name="birthday_image" id="birthday_image" class="form-control input-field"
-                                                @change="handleImageChange" accept="uploads/birthdays/*">
-                                                <label for="birthday_recipe">Recipe</label>
-                                                <textarea name="birthday_recipe" id="birthday_recipe" class="textarea-field form-control" rows="3" v-model="birthday.recipe" ></textarea>
+                                                    <label for="wedding_image">Image</label>
+                                                <input type="file" name="wedding_image" id="wedding_image" class="form-control input-field"
+                                                @change="handleImageChange" accept="uploads/weddings/*">
+                                                <label for="wedding_recipe">Recipe</label>
+                                                <textarea name="wedding_recipe" id="wedding_recipe" class="textarea-field form-control" rows="3" v-model="wedding.recipe" ></textarea>
 
 
                                             </div>
@@ -104,7 +104,7 @@ export default {
 
     data() {
         return {
-    birthday: {
+    wedding: {
         name: '',
         image: null,
         recipe: '',
@@ -116,21 +116,21 @@ export default {
 
     methods: {
         handleImageChange(event) {
-            this.birthday.image = event.target.files[0];
+            this.wedding.image = event.target.files[0];
         },
         submitForm() {
             const formData = new FormData();
-            formData.append('name', this.birthday.name);
-                formData.append('image', this.birthday.image);
-                formData.append('recipe', this.birthday.recipe);
+            formData.append('name', this.wedding.name);
+                formData.append('image', this.wedding.image);
+                formData.append('recipe', this.wedding.recipe);
                 
-            axios.post('birthday/create', formData, {
+            axios.post('wedding/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
       }).then(res=>{
                 console.log(res);
-                this.$router.push('/birthday');
+                this.$router.push('/wedding');
             })
         },
     },
